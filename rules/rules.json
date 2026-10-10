@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "source": "CAQM Direction No. 104 dated 29.09.2026, GRAP Schedule (Revision 29.09.2026)",
+    "verified_against_official_pdf": false,
+    "note": "Decision support only. The official CAQM order prevails. Stages are cumulative: higher stages add to lower ones (Schedule para 4).",
+    "stages": {
+      "1": "Poor (Delhi AQI 201-300)",
+      "2": "Very Poor (AQI 301-400)",
+      "3": "Severe (AQI 401-450)",
+      "4": "Severe+ (AQI above 450)"
+    },
+    "emergency_services": [
+      "Operating elevators / escalators / travelators",
+      "Medical services (hospital / nursing home / health care)",
+      "Railway services / stations",
+      "Metro Rail and MRTS services",
+      "Airports and inter-state bus terminals",
+      "Sewage treatment plants",
+      "Water pumping stations",
+      "Projects related to national security, defence and national importance",
+      "Telecommunications and IT / data services"
+    ]
+  },
+  "rules": [
+    {
+      "id": "C-S1-01",
+      "stage": 1,
+      "category": "construction",
+      "kind": "requirement",
+      "title": "Dust mitigation at C&D sites",
+      "summary": "C&D materials and waste must be stored and covered, transported only in covered vehicles, and the site must use anti-smog guns and water sprinkling.",
+      "exceptions": [],
+      "fix": "Cover stored materials and waste, use covered vehicles, run anti-smog guns and sprinkle water.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; construction agencies and plot owners",
+      "clause": "Stage I, Action 1"
+    },
+    {
+      "id": "C-S1-02",
+      "stage": 1,
+      "category": "construction",
+      "kind": "requirement",
+      "title": "Web-portal registration for sites of 500 sqm or more",
+      "summary": "C&D activity is not permitted for projects with plot size of 500 sqm or more that are not registered on the State / GNCTD web portal or do not meet the other requirements of Direction Nos. 11-18 dated 11.06.2021.",
+      "exceptions": [],
+      "fix": "Register the project on the State / GNCTD web portal and meet the remote dust-monitoring requirements of Direction Nos. 11-18 dated 11.06.2021.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; construction agencies and plot owners",
+      "clause": "Stage I, Action 2"
+    },
+    {
+      "id": "C-S3-01",
+      "stage": 3,
+      "category": "construction",
+      "kind": "ban",
+      "title": "Listed dust-generating C&D activities",
+      "summary": "Strict restrictions across the entire NCR on: excavation, filling, boring and drilling; piling; all demolition; open-trench laying of sewer, water, drainage and cabling; brick / masonry work; RMC batching plant; major welding and gas-cutting; painting, polishing and varnishing; cement, plaster and other coatings; cutting, grinding and fixing of tiles, stone and flooring; road construction and major repairs; transfer, loading and unloading of dust-generating materials (cement, fly-ash, bricks, sand, murram, pebbles, crushed stone); and movement of vehicles carrying construction materials or C&D waste on unpaved roads.",
+      "exceptions": [
+        "Minor welding for MEP works is permitted.",
+        "Pothole repair is permitted.",
+        "Minor indoor repairs / maintenance are excepted for plaster / coatings and for tile, stone and flooring work.",
+        "Other construction activities not on the list are permitted, subject to the C&D Waste Management Rules and dust control norms.",
+        "All C&D activity continues for: railway services and stations; metro rail and stations; airports and inter-state bus terminals; national security / defence / national importance projects; hospitals and health care facilities; linear public projects (highways, roads, flyovers, over bridges, power transmission / distribution, pipelines, telecom); sanitation projects (sewage treatment plants, water supply); and ancillary activities specific to these.",
+        "Linear public projects lose this exception at Stage IV (see C-S4-01)."
+      ],
+      "fix": "Pause the listed activities until the stage is lowered, or confirm whether the project falls in an exempt category.",
+      "authority": "NCR State Governments and GNCTD; CPCB, DPCC and SPCBs; Urban Local Bodies; construction agencies and plot owners",
+      "clause": "Stage III, Action 1(i), 1(ii), 1(iii)"
+    },
+    {
+      "id": "C-S4-01",
+      "stage": 4,
+      "category": "construction",
+      "kind": "ban",
+      "title": "Stage III C&D ban extends to linear public projects",
+      "summary": "The Stage III C&D ban also applies to linear public projects such as highways, roads, flyovers, overbridges, power transmission, pipelines and telecommunication.",
+      "exceptions": [],
+      "fix": "Pause the listed activities on linear public projects until the stage is lowered.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; nodal officers of road-owning agencies",
+      "clause": "Stage IV, Action 3"
+    },
+    {
+      "id": "V-S1-01",
+      "stage": 1,
+      "category": "vehicles",
+      "kind": "ban",
+      "title": "Over-aged diesel / petrol vehicles",
+      "summary": "The NGT / Supreme Court ban on plying over-aged diesel and petrol vehicles is to be strictly enforced.",
+      "exceptions": [],
+      "fix": "Do not use over-aged vehicles. Replace them with a compliant vehicle.",
+      "authority": "Transport Departments of Delhi and NCR States; Traffic Police",
+      "clause": "Stage I, Action 11"
+    },
+    {
+      "id": "V-S3-01",
+      "stage": 3,
+      "category": "vehicles",
+      "kind": "ban",
+      "title": "BS-III petrol and BS-IV diesel light motor vehicles",
+      "summary": "Strict restrictions on plying BS-III petrol and BS-IV diesel (or below) LMVs (4-wheelers) in Delhi and in the High Vehicle Density districts of Gurugram, Faridabad, Sonipat, Ghaziabad and Gautam Budha Nagar.",
+      "exceptions": [
+        "Persons with Disabilities may ply such LMVs if specifically adapted for them and used only for personal use."
+      ],
+      "fix": "Use a BS-VI, CNG or electric vehicle instead.",
+      "authority": "State Governments in NCR and GNCTD; Transport Commissioners; Traffic Police",
+      "clause": "Stage III, Action 4"
+    },
+    {
+      "id": "V-S3-02",
+      "stage": 3,
+      "category": "vehicles",
+      "kind": "ban",
+      "title": "Delhi-registered diesel BS-IV and below medium goods vehicles",
+      "summary": "Strict restrictions on plying Delhi-registered diesel BS-IV and below medium goods vehicles (MGVs) in Delhi.",
+      "exceptions": [],
+      "fix": "Use a BS-VI, CNG or electric goods vehicle.",
+      "authority": "State Governments in NCR and GNCTD; Transport Commissioners; Traffic Police",
+      "clause": "Stage III, Action 5"
+    },
+    {
+      "id": "V-S3-03",
+      "stage": 3,
+      "category": "vehicles",
+      "kind": "ban",
+      "title": "Outside-Delhi diesel BS-IV and below MGVs and LGVs entering Delhi",
+      "summary": "Diesel BS-IV and below medium goods vehicles and light goods vehicles registered outside Delhi are not permitted to enter Delhi.",
+      "exceptions": [],
+      "fix": "Use a BS-VI, CNG or electric goods vehicle for deliveries into Delhi.",
+      "authority": "GNCTD; Transport Commissioners; Urban Local Bodies; Traffic Police",
+      "clause": "Stage III, Actions 6 and 7"
+    },
+    {
+      "id": "V-S4-01",
+      "stage": 4,
+      "category": "vehicles",
+      "kind": "ban",
+      "title": "Heavy goods vehicles (trucks) in Delhi",
+      "summary": "Entry of trucks (HGVs) into Delhi is stopped, and Delhi-registered diesel BS-IV and below HGVs are banned from plying in Delhi.",
+      "exceptions": [
+        "LNG / CNG / electric / BS-VI diesel trucks are permitted."
+      ],
+      "fix": "Use an LNG, CNG, electric or BS-VI diesel truck.",
+      "authority": "State Governments in NCR and GNCTD; Transport Commissioners; Urban Local Bodies; Traffic Police",
+      "clause": "Stage IV, Actions 1 and 2"
+    },
+    {
+      "id": "W-S1-01",
+      "stage": 1,
+      "category": "waste_burning",
+      "kind": "ban",
+      "title": "Open burning of biomass and municipal solid waste",
+      "summary": "Open burning of bio-mass and municipal solid waste is prohibited. Maximum Environmental Compensation is imposed on violations as per NGT orders dated 04.12.2014 and 28.04.2015 in OA 21/2014.",
+      "exceptions": [],
+      "fix": "Stop burning. Send waste to designated collection points.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies",
+      "clause": "Stage I, Action 6"
+    },
+    {
+      "id": "W-S1-02",
+      "stage": 1,
+      "category": "waste_burning",
+      "kind": "ban",
+      "title": "Illegal dumping of waste",
+      "summary": "No MSW, C&D, industrial or hazardous waste may be dumped illegally in open land. Waste must be lifted regularly from dedicated dump sites and industrial areas.",
+      "exceptions": [],
+      "fix": "Dispose of waste only at designated sites and arrange regular lifting.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; DMs / DCs; land-owning and construction agencies",
+      "clause": "Stage I, Action 3"
+    },
+    {
+      "id": "W-S2-01",
+      "stage": 2,
+      "category": "waste_burning",
+      "kind": "requirement",
+      "title": "RWAs must provide electric heaters to staff",
+      "summary": "Resident Welfare Associations must provide electric heaters (with electricity supply point) to staff in security, sanitation, horticulture and other services, to avoid open biomass / MSW burning in winter.",
+      "exceptions": [],
+      "fix": "Provide electric heaters with a power point to security, sanitation and horticulture staff.",
+      "authority": "Resident Welfare Associations; Municipal Commissioners",
+      "clause": "Stage II, Action 6"
+    },
+    {
+      "id": "D-S1-01",
+      "stage": 1,
+      "category": "dg_sets",
+      "kind": "ban",
+      "title": "DG sets as a regular power source",
+      "summary": "Diesel generator sets must not be used as a regular source of power supply.",
+      "exceptions": [],
+      "fix": "Use grid power, with the DG set only as backup.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; DMs / DCs",
+      "clause": "Stage I, Action 17"
+    },
+    {
+      "id": "D-S1-02",
+      "stage": 1,
+      "category": "dg_sets",
+      "kind": "requirement",
+      "title": "Older-spec DG sets of 800 kW (1000 kVA) and above",
+      "summary": "DG sets of older specifications at 800 kW (1000 kVA) and above must have an emission control system / mechanism and comply with the emission standards in Direction No. 76 dated 29.09.2023.",
+      "exceptions": [
+        "Gas-based sets (LPG / natural gas / bio-gas / propane / butane) of any capacity have no restriction.",
+        "DG sets up to 800 kW (1000 kVA) that meet MoEFCC notification GSR 804(E) dated 03.11.2022 have no restriction."
+      ],
+      "fix": "Fit an emission control system and comply with Direction No. 76 standards, or switch to a gas-based / GSR 804(E)-compliant set.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; DMs / DCs",
+      "clause": "Stage I, Action 18 (table), Direction No. 76 dated 29.09.2023"
+    },
+    {
+      "id": "D-S1-03",
+      "stage": 1,
+      "category": "dg_sets",
+      "kind": "requirement",
+      "title": "Older-spec DG sets of 41 kW (51 kVA) to below 800 kW (1000 kVA)",
+      "summary": "These sets must run in dual-fuel mode or be retro-fitted with emission control devices through certified agencies. A set that is not dual-fuel only because gas infrastructure or supply is unavailable is permitted only for the emergency services.",
+      "exceptions": [
+        "Gas-based sets and GSR 804(E)-compliant sets have no restriction.",
+        "Permitted for the emergency services if not dual-fuel only due to gas unavailability."
+      ],
+      "fix": "Convert to dual-fuel or retro-fit certified emission control devices.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; DMs / DCs",
+      "clause": "Stage I, Action 18 (table)"
+    },
+    {
+      "id": "D-S1-04",
+      "stage": 1,
+      "category": "dg_sets",
+      "kind": "requirement",
+      "title": "Older-spec DG sets of 19 kW (23 kVA) to below 41 kW (51 kVA)",
+      "summary": "These sets must run in dual-fuel mode. A set that is not dual-fuel only because gas infrastructure or supply is unavailable is permitted only for the emergency services.",
+      "exceptions": [
+        "Gas-based sets and GSR 804(E)-compliant sets have no restriction.",
+        "Permitted for the emergency services if not dual-fuel only due to gas unavailability."
+      ],
+      "fix": "Convert to dual-fuel mode.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; DMs / DCs",
+      "clause": "Stage I, Action 18 (table)"
+    },
+    {
+      "id": "D-S1-05",
+      "stage": 1,
+      "category": "dg_sets",
+      "kind": "ban",
+      "title": "Portable DG sets below 19 kW (23 kVA)",
+      "summary": "No specific means of emission control are available in this range, so these sets are not generally permitted.",
+      "exceptions": [
+        "Permitted only for the prescribed emergency services (see meta.emergency_services)."
+      ],
+      "fix": "Use grid power or a gas-based set. Keep a portable set only for an emergency service.",
+      "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; DMs / DCs",
+      "clause": "Stage I, Action 18 (table)"
+    }
+  ]
+}
