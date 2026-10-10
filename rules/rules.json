@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "CAQM Direction No. 104 dated 29.09.2026, GRAP Schedule (Revision 29.09.2026)",
-    "verified_against_official_pdf": false,
+    "verified_against_official_pdf": true,
     "note": "Decision support only. The official CAQM order prevails. Stages are cumulative: higher stages add to lower ones (Schedule para 4).",
     "stages": {
       "1": "Poor (Delhi AQI 201-300)",
