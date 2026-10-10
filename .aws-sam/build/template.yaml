@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Niyam - GRAP site check (Cedar on Lambda)
+Resources:
+  ChecksTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: niyam-checks
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+      - AttributeName: id
+        AttributeType: S
+      KeySchema:
+      - AttributeName: id
+        KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+  NiyamFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: NiyamFunction
+      Handler: src/lambda.handler
+      Runtime: nodejs22.x
+      MemorySize: 512
+      Timeout: 15
+      Environment:
+        Variables:
+          TABLE_NAME:
+            Ref: ChecksTable
+      Policies:
+      - DynamoDBWritePolicy:
+          TableName:
+            Ref: ChecksTable
+      FunctionUrlConfig:
+        AuthType: NONE
+    Metadata:
+      SamResourceId: NiyamFunction
+Outputs:
+  NiyamUrl:
+    Value:
+      Fn::GetAtt:
+      - NiyamFunctionUrl
+      - FunctionUrl

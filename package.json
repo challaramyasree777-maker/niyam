@@ -12,5 +12,11 @@
   "type": "commonjs",
   "dependencies": {
     "@cedar-policy/cedar-wasm": "4.13.0"
-  }
+  },
+  "files": [
+    "src",
+    "rules",
+    "policies",
+    "public"
+  ]
 }
