@@ -59,6 +59,14 @@ for (const [id, cat, bad, good] of CASES) {
   if (stage > 1) check(id + ' silent one stage below', !hit(ctx(bad, stage - 1)));
 }
 
+// D-S1-02 boundary checks
+const dgHit = o => evaluate('dg_sets', { ...BASE.dg_sets, stage: 1, ...o }).matched.some(r => r.id === 'D-S1-02');
+check('D-S1-02: GSR set at exactly 1000 kVA is exempt', !dgHit({ gso_compliant: true, dg_kva: 1000, emission_control: false }));
+check('D-S1-02: GSR set above 1000 kVA without emission control fires', dgHit({ gso_compliant: true, dg_kva: 1200, emission_control: false }));
+check('D-S1-02: GSR set above 1000 kVA with emission control is quiet', !dgHit({ gso_compliant: true, dg_kva: 1200, emission_control: true }));
+check('D-S1-02: older set at exactly 1000 kVA without emission control fires', dgHit({ gso_compliant: false, dg_kva: 1000, emission_control: false }));
+check('D-S1-02: older set at exactly 1000 kVA with emission control is quiet', !dgHit({ gso_compliant: false, dg_kva: 1000, emission_control: true }));
+
 // Stages are cumulative: a Stage I rule still fires at Stage IV
 check('cumulative: C-S1-01 fires at stage 4',
   evaluate('construction', { ...BASE.construction, stage: 4, dust_controls: false })

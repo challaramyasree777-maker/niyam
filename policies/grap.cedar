@@ -76,8 +76,10 @@ when { context.stage >= 1 && context.fuel == "diesel" && context.regular_power }
 @id("D-S1-02")
 forbid(principal, action == Action::"dg_sets", resource)
 when {
-  context.stage >= 1 && context.fuel == "diesel" && !context.gso_compliant &&
-  context.dg_kva >= 1000 && !context.emission_control
+  context.stage >= 1 && context.fuel == "diesel" &&
+  context.dg_kva >= 1000 &&
+  (!context.gso_compliant || context.dg_kva > 1000) &&
+  !context.emission_control
 };
 
 @id("D-S1-03")

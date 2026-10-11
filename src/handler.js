@@ -20,7 +20,7 @@ function buildContexts(site, stage) {
       portal_registered: bool(site.portal_registered),
       dust_controls: bool(site.dust_controls),
       listed_activity: bool(site.listed_activity),
-      exempt_project: bool(site.exempt_project),
+      exempt_project: bool(site.exempt_project) || bool(site.linear_project),
       linear_project: bool(site.linear_project),
     },
     vehicles: {

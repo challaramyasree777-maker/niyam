@@ -1,7 +1,9 @@
 {
   "meta": {
     "source": "CAQM Direction No. 104 dated 29.09.2026, GRAP Schedule (Revision 29.09.2026)",
-    "verified_against_official_pdf": true,
+    "verified_against_official_pdf": false,
+    "verified_rule_ids": ["D-S1-02", "D-S1-03", "D-S1-04", "D-S1-05", "C-S3-01", "V-S3-01"],
+    "verification_note": "Only the rules listed in verified_rule_ids were checked line by line against the official CAQM PDF. The others were transcribed by hand and should be re-checked before real use.",
     "note": "Decision support only. The official CAQM order prevails. Stages are cumulative: higher stages add to lower ones (Schedule para 4).",
     "stages": {
       "1": "Poor (Delhi AQI 201-300)",
@@ -40,7 +42,7 @@
       "category": "construction",
       "kind": "requirement",
       "title": "Web-portal registration for sites of 500 sqm or more",
-      "summary": "C&D activity is not permitted for projects with plot size of 500 sqm or more that are not registered on the State / GNCTD web portal or do not meet the other requirements of Direction Nos. 11-18 dated 11.06.2021.",
+      "summary": "C&D activity is not permitted for projects with plot size of 500 sqm or more that are not registered on the State / GNCTD web portal and / or do not meet the other requirements of Direction Nos. 11-18 dated 11.06.2021. Niyam checks portal registration only. Confirm the other requirements separately.",
       "exceptions": [],
       "fix": "Register the project on the State / GNCTD web portal and meet the remote dust-monitoring requirements of Direction Nos. 11-18 dated 11.06.2021.",
       "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; construction agencies and plot owners",
@@ -194,13 +196,13 @@
       "stage": 1,
       "category": "dg_sets",
       "kind": "requirement",
-      "title": "Older-spec DG sets of 800 kW (1000 kVA) and above",
-      "summary": "DG sets of older specifications at 800 kW (1000 kVA) and above must have an emission control system / mechanism and comply with the emission standards in Direction No. 76 dated 29.09.2023.",
+      "title": "DG sets of 800 kW (1000 kVA) and above",
+      "summary": "Diesel DG sets of 800 kW (1000 kVA) and above must have an emission control system / mechanism and comply with the emission standards in Direction No. 76 dated 29.09.2023. The order's table lists the GSR 804(E) exemption only up to 800 kW (1000 kVA), so Niyam treats GSR-compliant sets above that size like older sets.",
       "exceptions": [
         "Gas-based sets (LPG / natural gas / bio-gas / propane / butane) of any capacity have no restriction.",
         "DG sets up to 800 kW (1000 kVA) that meet MoEFCC notification GSR 804(E) dated 03.11.2022 have no restriction."
       ],
-      "fix": "Fit an emission control system and comply with Direction No. 76 standards, or switch to a gas-based / GSR 804(E)-compliant set.",
+      "fix": "Fit an emission control system and comply with Direction No. 76 standards, or switch to a gas-based set, or to a GSR 804(E)-compliant set of up to 1000 kVA.",
       "authority": "CPCB, DPCC and SPCBs; Urban Local Bodies; DMs / DCs",
       "clause": "Stage I, Action 18 (table), Direction No. 76 dated 29.09.2023"
     },
