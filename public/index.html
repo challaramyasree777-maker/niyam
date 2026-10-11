@@ -45,6 +45,8 @@
   .rule ul { margin: 4px 0 4px 18px; padding: 0; font-size: .9rem; }
   .muted { color: var(--muted); }
   .disc { font-size: .85rem; color: var(--muted); border-left: 3px solid var(--warn); padding-left: 10px; }
+  button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #0b5fff; outline-offset: 2px; }
+  a { color: inherit; text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -146,6 +148,10 @@
   <button id="go">Check my site</button>
 
   <div id="out" style="margin-top:16px"></div>
+
+  <footer class="disc" style="margin-top:24px">
+    <p><b>About and privacy.</b> Niyam is a free hackathon project. Source code: <a href="https://github.com/challaramyasree777-maker/niyam">GitHub</a>. Rules are transcribed from CAQM Direction No. 104 (29.09.2026). This is decision support only, and the official CAQM order prevails. You do not need an account. Each check saves only the verdicts and a timestamp for 30 days. Your site details are not stored.</p>
+  </footer>
 </main>
 
 <script>
@@ -193,6 +199,7 @@ const HI = {
   'D-S1-05': 'छोटा पोर्टेबल DG सेट (23 kVA से कम) केवल आपातकालीन सेवा के लिए'
 };
 const HI_CAT = { construction: 'निर्माण', vehicles: 'वाहन', waste_burning: 'कचरा/जलाना', dg_sets: 'DG सेट' };
+const EXTRA = { 'C-S3-01': ': excavation, piling, demolition, brick/masonry work, plaster, painting, tiling, road work, loading/unloading of cement, sand and bricks' };
 
 function buildNotice(lang) {
   const hi = lang === 'hi';
@@ -202,9 +209,10 @@ function buildNotice(lang) {
     const r = row[selStage - 1];
     if (!r.matched.length) clear.push(hi ? HI_CAT[cat] : CATS[cat]);
     r.matched.forEach(m => {
-      
-      const EXTRA = { 'C-S3-01': ': excavation, piling, demolition, brick/masonry work, plaster, painting, tiling, road work, loading/unloading of cement, sand and bricks' };
-      const line = hi ? (HI[m.id] || m.title) : (m.kind === 'ban' ? m.title + (EXTRA[m.id] || '') : m.title + ' - ' + m.fix);      (m.kind === 'ban' ? stops : fixes).push('- ' + line + ' [' + m.id + ']');
+      const line = hi
+        ? (HI[m.id] || m.title)
+        : (m.kind === 'ban' ? m.title + (EXTRA[m.id] || '') : m.title + ' - ' + m.fix);
+      (m.kind === 'ban' ? stops : fixes).push('- ' + line + ' [' + m.id + ']');
     });
   }
   const L = [];
@@ -262,10 +270,10 @@ function render() {
   html += `<div class="card"><h2>Crew notice (Stage ${STAGES[selStage - 1]})</h2>
     <p class="muted">Built from the verdicts above, no AI involved. Copy it into WhatsApp.</p>
     <h3 style="font-size:.95rem">हिंदी</h3>
-    <textarea id="n-hi" readonly rows="12" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font:inherit"></textarea>
+    <textarea id="n-hi" lang="hi" aria-label="Hindi crew notice" readonly rows="12" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font:inherit"></textarea>
     <p><button class="copy" data-t="n-hi">Copy Hindi</button></p>
     <h3 style="font-size:.95rem">English</h3>
-    <textarea id="n-en" readonly rows="12" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font:inherit"></textarea>
+    <textarea id="n-en" aria-label="English crew notice" readonly rows="12" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font:inherit"></textarea>
     <p><button class="copy" data-t="n-en">Copy English</button></p></div>`;
 
   $('out').innerHTML = html;
